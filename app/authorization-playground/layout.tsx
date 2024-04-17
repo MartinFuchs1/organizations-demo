@@ -6,7 +6,7 @@ import Link from "next/link"
 export default function AuthorizationPlaygroundLayout(
   props: PropsWithChildren
 ) {
-  const { orgId, has } = auth().protect({ redirectUrl: "/sign-in" })
+  const { orgId, has } = auth().protect({ unauthenticatedUrl: "/sign-in" })
 
   if (!orgId) {
     return (
